@@ -1,0 +1,45 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ROOT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="VIRTUAL_SENSORS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VIRTUAL_SENSOR">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="components" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="uuid"/>
+                          <xs:element name="value">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="category"/>
+                                <xs:element type="xs:string" name="sensorType" minOccurs="0"/>
+                                <xs:element type="xs:int" name="deviceID" minOccurs="0"/>
+                                <xs:element type="xs:string" name="name"/>
+                                <xs:element type="xs:byte" name="setIntervalId"/>
+                                <xs:element type="xs:string" name="expression" minOccurs="0"/>
+                                <xs:element type="xs:string" name="children" maxOccurs="unbounded" minOccurs="0"/>
+                                <xs:element type="xs:short" name="top"/>
+                                <xs:element type="xs:short" name="left"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="source"/>
+                    <xs:element type="xs:byte" name="version"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="SETTINGS"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

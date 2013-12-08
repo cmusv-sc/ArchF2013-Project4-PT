@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow xmlns="http://taverna.sf.net/2008/xml/t2flow" version="1" producedBy="CMUSV">
+   <dataflow id="enolkecabdblmhdg" role="top">
+      <name>FOOBAR1</name>
+      <inputPorts>
+         <port>
+            <name>B23RM115TEMP</name>
+            <depth>0</depth>
+            <granularDepth>0</granularDepth>
+         </port>
+         <port>
+            <name>B23RM116TEMP</name>
+            <depth>0</depth>
+            <granularDepth>0</granularDepth>
+         </port>
+      </inputPorts>
+      <outputPorts>
+         <port>
+            <name>FOOBAR1</name>
+            <annotations />
+         </port>
+      </outputPorts>
+      <processors>
+         <processor>
+            <name>AVERAGE</name>
+            <inputPorts>
+               <port>
+                  <name>B23RM115TEMP</name>
+                  <depth>0</depth>
+               </port>
+               <port>
+                  <name>B23RM116TEMP</name>
+                  <depth>0</depth>
+               </port>
+            </inputPorts>
+            <outputPorts>
+               <port>
+                  <name>AVERAGE</name>
+                  <depth>0</depth>
+                  <granularDepth>0</granularDepth>
+               </port>
+            </outputPorts>
+            <annotations />
+            <activities />
+            <dispatchStack />
+            <iterationStrategyStack>
+               <iteration>
+                  <strategy />
+               </iteration>
+            </iterationStrategyStack>
+         </processor>
+      </processors>
+      <conditions />
+      <datalinks>
+         <datalink>
+            <sink type="processor">
+               <processor>AVERAGE</processor>
+               <port>B23RM115TEMP</port>
+            </sink>
+            <source type="dataflow">
+               <port>B23RM115TEMP</port>
+            </source>
+         </datalink>
+         <datalink>
+            <sink type="processor">
+               <processor>AVERAGE</processor>
+               <port>B23RM116TEMP</port>
+            </sink>
+            <source type="dataflow">
+               <port>B23RM116TEMP</port>
+            </source>
+         </datalink>
+         <datalink>
+            <sink type="dataflow">
+               <port>FOOBAR1</port>
+            </sink>
+            <source type="processor">
+               <processor>AVERAGE</processor>
+               <port>AVERAGE</port>
+            </source>
+         </datalink>
+      </datalinks>
+      <annotations />
+   </dataflow>
+   <dataflow id="jembfmllekbdidno" role="top">
+      <name>TESTJOHN1</name>
+      <inputPorts>
+         <port>
+            <name>B23RM211TEMP</name>
+            <depth>0</depth>
+            <granularDepth>0</granularDepth>
+         </port>
+         <port>
+            <name>B23RM212TEMP</name>
+            <depth>0</depth>
+            <granularDepth>0</granularDepth>
+         </port>
+      </inputPorts>
+      <outputPorts>
+         <port>
+            <name>TESTJOHN1</name>
+            <annotations />
+         </port>
+      </outputPorts>
+      <processors>
+         <processor>
+            <name>FUNCTION</name>
+            <inputPorts>
+               <port>
+                  <name>B23RM211TEMP</name>
+                  <depth>0</depth>
+               </port>
+               <port>
+                  <name>B23RM212TEMP</name>
+                  <depth>0</depth>
+               </port>
+            </inputPorts>
+            <outputPorts>
+               <port>
+                  <name>FUNCTION</name>
+                  <depth>0</depth>
+                  <granularDepth>0</granularDepth>
+               </port>
+            </outputPorts>
+            <annotations />
+            <activities />
+            <dispatchStack />
+            <iterationStrategyStack>
+               <iteration>
+                  <strategy />
+               </iteration>
+            </iterationStrategyStack>
+         </processor>
+      </processors>
+      <conditions />
+      <datalinks>
+         <datalink>
+            <sink type="processor">
+               <processor>FUNCTION</processor>
+               <port>B23RM211TEMP</port>
+            </sink>
+            <source type="dataflow">
+               <port>B23RM211TEMP</port>
+            </source>
+         </datalink>
+         <datalink>
+            <sink type="processor">
+               <processor>FUNCTION</processor>
+               <port>B23RM212TEMP</port>
+            </sink>
+            <source type="dataflow">
+               <port>B23RM212TEMP</port>
+            </source>
+         </datalink>
+         <datalink>
+            <sink type="dataflow">
+               <port>TESTJOHN1</port>
+            </sink>
+            <source type="processor">
+               <processor>FUNCTION</processor>
+               <port>FUNCTION</port>
+            </source>
+         </datalink>
+      </datalinks>
+      <annotations />
+   </dataflow>
+</workflow>
