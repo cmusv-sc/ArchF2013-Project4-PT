@@ -18,8 +18,8 @@ sensor visualization and the virtual sensor editor.
   The virtual sensor editor (VSE) is a GUI-based tool that allows you to create
   virtual sensor output from physical sensor input. For example, you can create a
   virtual sensor that displays the real-time average temperature of all of the
-  rooms on the first floor of Carnegie Mellon Silicon Valley’s (CMUSV) building
-  23. This can be accomplished by dragging representations of the physical sensors
+  rooms on the first floor of Carnegie Mellon Silicon Valley’s (CMUSV) building 23.
+  This can be accomplished by dragging representations of the physical sensors
   onto a canvas and then drawing connections between them and a function box. The
   function box contains a JavaScript expression that is evaluated using the
   connected physical sensors’ data as arguments. The resulting value can either be
@@ -73,8 +73,8 @@ $ git clone -b gh-pages https://github.com/johnleee/VirtualSensorEditor.git
 
 Deployment 
 ---------- 
-$ cd VirtualSensorEditor 
-$ python -m SimpleHTTPServer 
-open browser to http://localhost:8000 for dashboard 
-open browser to http://localhost:8000/designtool.html for VSE 
-open browser to http://localhost:8000/PointInPolygon.html for geofencing
+* $ cd VirtualSensorEditor 
+* $ python -m SimpleHTTPServer 
+* open browser to http://localhost:8000 for dashboard 
+* open browser to http://localhost:8000/designtool.html for VSE 
+* open browser to http://localhost:8000/PointInPolygon.html for geofencing
